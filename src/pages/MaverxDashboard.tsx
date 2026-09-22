@@ -131,9 +131,9 @@ export function MaverxDashboard() {
           }}
         />
 
-        {/* Top-Left Ambient Emerald Orb 1 */}
+        {/* Top-Left Vibrant Mint Ambient Orb */}
         <div
-          className="absolute -top-[18%] -left-[12%] w-[750px] h-[750px] rounded-full blur-[100px] opacity-70 animate-ambient-orange"
+          className="absolute -top-[18%] -left-[12%] w-[750px] h-[750px] 2xl:w-[1050px] 2xl:h-[1050px] 3xl:w-[1300px] 3xl:h-[1300px] rounded-full blur-[100px] 2xl:blur-[140px] opacity-70 animate-ambient-orange"
           style={{
             background: "radial-gradient(circle, #34d399 0%, #a7f3d0 42%, rgba(167, 243, 208, 0.20) 68%, transparent 80%)",
           }}
@@ -141,7 +141,7 @@ export function MaverxDashboard() {
 
         {/* Top-Left Pulsing Mint Halo */}
         <div
-          className="absolute top-[2%] -left-[4%] w-[520px] h-[520px] rounded-full blur-[90px] opacity-55 animate-ambient-warm"
+          className="absolute top-[2%] -left-[4%] w-[520px] h-[520px] 2xl:w-[750px] 2xl:h-[750px] 3xl:w-[900px] 3xl:h-[900px] rounded-full blur-[90px] 2xl:blur-[120px] opacity-55 animate-ambient-warm"
           style={{
             background: "radial-gradient(circle, #6ee7b7 0%, #d1fae5 45%, rgba(209, 250, 229, 0) 75%)",
           }}
@@ -149,7 +149,7 @@ export function MaverxDashboard() {
 
         {/* Middle-Right Floating Jade Orb */}
         <div
-          className="absolute top-[18%] -right-[14%] w-[820px] h-[820px] rounded-full blur-[110px] opacity-65 animate-ambient-purple"
+          className="absolute top-[18%] -right-[14%] w-[820px] h-[820px] 2xl:w-[1100px] 2xl:h-[1100px] 3xl:w-[1400px] 3xl:h-[1400px] rounded-full blur-[110px] 2xl:blur-[150px] opacity-65 animate-ambient-purple"
           style={{
             background: "radial-gradient(circle, #10b981 0%, #6ee7b7 40%, rgba(110, 231, 183, 0.25) 65%, transparent 75%)",
           }}
@@ -157,7 +157,7 @@ export function MaverxDashboard() {
 
         {/* Lower-Right Vivid Forest / Emerald Accent Orb */}
         <div
-          className="absolute -bottom-[10%] right-[2%] w-[700px] h-[700px] rounded-full blur-[95px] opacity-70 animate-ambient-accent-purple"
+          className="absolute -bottom-[10%] right-[2%] w-[700px] h-[700px] 2xl:w-[950px] 2xl:h-[950px] 3xl:w-[1200px] 3xl:h-[1200px] rounded-full blur-[95px] 2xl:blur-[130px] opacity-70 animate-ambient-accent-purple"
           style={{
             background: "radial-gradient(circle, #059669 0%, #34d399 45%, rgba(52, 211, 153, 0.18) 70%, transparent 80%)",
           }}
@@ -165,19 +165,19 @@ export function MaverxDashboard() {
 
         {/* Bottom-Left Sage / Mint Mist */}
         <div
-          className="absolute -bottom-[8%] left-[12%] w-[550px] h-[550px] rounded-full blur-[100px] opacity-45 animate-ambient-lavender"
+          className="absolute -bottom-[8%] left-[12%] w-[550px] h-[550px] 2xl:w-[800px] 2xl:h-[800px] 3xl:w-[1000px] 3xl:h-[1000px] rounded-full blur-[100px] 2xl:blur-[130px] opacity-45 animate-ambient-lavender"
           style={{
             background: "radial-gradient(circle, #a7f3d0 0%, rgba(167, 243, 208, 0) 70%)",
           }}
         />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-3.5 py-4 sm:p-8 lg:p-10 flex flex-col gap-2">
+      <div className="relative z-10 w-full max-w-[1440px] xl:max-w-[1640px] 2xl:max-w-[1880px] 3xl:max-w-[2160px] mx-auto px-3.5 py-4 sm:p-8 lg:p-10 xl:p-12 2xl:p-14 flex flex-col gap-2 xl:gap-3.5 2xl:gap-4">
         {/* ===================== TOP NAVIGATION BAR ===================== */}
-        <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-3 sm:pb-5">
+        <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-3 sm:pb-5 xl:pb-6 2xl:pb-8">
           {/* Top row for mobile: Logo and Setting button */}
           <div className="flex items-center justify-between w-full sm:w-auto">
-            <div className="border border-black/[0.12] rounded-full px-4 sm:px-5 py-1.5 text-[15px] sm:text-[17px] font-semibold tracking-tight text-[#1a1a1a] bg-white/50 backdrop-blur-xs shadow-xs">
+            <div className="border border-black/[0.12] rounded-full px-4 sm:px-5 xl:px-6 py-1.5 xl:py-2 text-[15px] sm:text-[17px] xl:text-[18px] 2xl:text-[19px] font-semibold tracking-tight text-[#1a1a1a] bg-white/50 backdrop-blur-xs shadow-xs">
               Miltomy
             </div>
             {/* Mobile-only Settings button */}
@@ -191,10 +191,10 @@ export function MaverxDashboard() {
 
           {/* Navigation links with white rounded capsule & animated sliding active pill */}
           <div className="flex items-center gap-2 sm:gap-4 w-full sm:w-auto overflow-hidden">
-            <nav className="relative flex items-center bg-white/70 backdrop-blur-md border border-black/[0.08] shadow-xs rounded-full p-1 overflow-x-auto scrollbar-none flex-nowrap">
+            <nav className="relative flex items-center bg-white/70 backdrop-blur-md border border-black/[0.08] shadow-xs rounded-full p-1 xl:p-1.5 overflow-x-auto scrollbar-none flex-nowrap">
               {/* Animated sliding active black pill indicator */}
               <div
-                className="absolute top-1 bottom-1 rounded-full bg-[#1c1e21] shadow-xs pointer-events-none transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                className="absolute top-1 bottom-1 xl:top-1.5 xl:bottom-1.5 rounded-full bg-[#1c1e21] shadow-xs pointer-events-none transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)]"
                 style={{
                   left: `${indicatorStyle.left}px`,
                   width: `${indicatorStyle.width}px`,
@@ -211,7 +211,7 @@ export function MaverxDashboard() {
                       tabRefs.current[tab] = el;
                     }}
                     onClick={() => setActiveTab(tab)}
-                    className={`relative z-10 text-[12px] sm:text-[13px] whitespace-nowrap transition-colors duration-200 cursor-pointer shrink-0 px-3.5 sm:px-4 py-1.5 rounded-full ${
+                    className={`relative z-10 text-[12px] sm:text-[13px] xl:text-[14px] 2xl:text-[15px] whitespace-nowrap transition-colors duration-200 cursor-pointer shrink-0 px-3.5 sm:px-4 xl:px-5 2xl:px-5.5 py-1.5 xl:py-2 rounded-full ${
                       isActive
                         ? "text-white font-medium"
                         : "text-[#555a63] hover:text-[#111] font-normal"
@@ -225,7 +225,7 @@ export function MaverxDashboard() {
 
             {/* Desktop-only Setting button */}
             <div className="hidden sm:flex items-center pl-1 shrink-0">
-              <button className="border border-black/[0.12] rounded-full px-4 py-1.5 text-[13px] font-normal text-neutral-800 flex items-center gap-1.5 bg-white/40 hover:bg-white/60 transition-colors shadow-xs cursor-pointer">
+              <button className="border border-black/[0.12] rounded-full px-4 xl:px-5 py-1.5 xl:py-2 text-[13px] xl:text-[14px] 2xl:text-[15px] font-normal text-neutral-800 flex items-center gap-1.5 bg-white/40 hover:bg-white/60 transition-colors shadow-xs cursor-pointer">
                 <Settings size={13} strokeWidth={1.5} className="text-neutral-700" />
                 <span>Setting</span>
               </button>
@@ -234,38 +234,38 @@ export function MaverxDashboard() {
         </header>
 
         {/* ===================== GREETING & METRICS PIPELINE ROW ===================== */}
-        <section className="pt-1 sm:pt-2 pb-4 sm:pb-5">
-          <h1 className="text-[26px] sm:text-[34px] lg:text-[38px] font-normal tracking-tight text-[#161719] leading-tight mb-3 sm:mb-4">
+        <section className="pt-1 sm:pt-2 pb-4 sm:pb-5 xl:pb-6 2xl:pb-8">
+          <h1 className="text-[26px] sm:text-[34px] lg:text-[38px] xl:text-[44px] 2xl:text-[50px] 3xl:text-[56px] font-normal tracking-tight text-[#161719] leading-tight mb-3 sm:mb-4 xl:mb-5">
             Welcome in, Milton
           </h1>
 
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 xl:gap-8">
             {/* Left side: Segmented Status Pipeline with horizontal safety */}
             <div className="w-full lg:w-auto overflow-x-auto scrollbar-none pb-1">
               <div className="min-w-[340px] sm:min-w-0 flex flex-col">
                 {/* Labels directly positioned above the pills */}
-                <div className="flex items-center text-[11px] font-normal text-[#666] mb-1.5 pl-1">
-                  <span className="w-14 sm:w-[62px] text-center shrink-0">Interviews</span>
-                  <span className="w-14 sm:w-[62px] text-center ml-2 shrink-0">Hired</span>
-                  <span className="flex-1 sm:w-72 text-left pl-3 ml-2 min-w-[120px]">Project time</span>
-                  <span className="w-14 sm:w-[62px] text-center ml-2 shrink-0">Output</span>
+                <div className="flex items-center text-[11px] xl:text-[12px] 2xl:text-[13px] font-normal text-[#666] mb-1.5 pl-1">
+                  <span className="w-14 sm:w-[62px] xl:w-20 2xl:w-24 text-center shrink-0">Interviews</span>
+                  <span className="w-14 sm:w-[62px] xl:w-20 2xl:w-24 text-center ml-2 shrink-0">Hired</span>
+                  <span className="flex-1 sm:w-72 xl:w-88 2xl:w-96 text-left pl-3 ml-2 min-w-[120px]">Project time</span>
+                  <span className="w-14 sm:w-[62px] xl:w-20 2xl:w-24 text-center ml-2 shrink-0">Output</span>
                 </div>
 
                 {/* Pipeline Pills */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 xl:gap-2.5">
                   {/* Interviews 15% dark pill */}
-                  <div className="bg-[#24272c] text-white text-[11px] sm:text-[12px] font-medium px-2.5 sm:px-4 py-1.5 rounded-full w-14 sm:w-[62px] text-center shadow-xs shrink-0">
+                  <div className="bg-[#24272c] text-white text-[11px] sm:text-[12px] xl:text-[13px] 2xl:text-[14px] font-medium px-2.5 sm:px-4 xl:px-5 py-1.5 xl:py-2 rounded-full w-14 sm:w-[62px] xl:w-20 2xl:w-24 text-center shadow-xs shrink-0">
                     15%
                   </div>
 
                   {/* Hired 15% brand green pill */}
-                  <div className="bg-[#c8ff00] text-[#0a0a0a] text-[11px] sm:text-[12px] font-semibold px-2.5 sm:px-4 py-1.5 rounded-full w-14 sm:w-[62px] text-center shadow-xs shrink-0">
+                  <div className="bg-[#c8ff00] text-[#0a0a0a] text-[11px] sm:text-[12px] xl:text-[13px] 2xl:text-[14px] font-semibold px-2.5 sm:px-4 xl:px-5 py-1.5 xl:py-2 rounded-full w-14 sm:w-[62px] xl:w-20 2xl:w-24 text-center shadow-xs shrink-0">
                     15%
                   </div>
 
                   {/* Project time 60% translucent diagonal striped pill */}
                   <div
-                    className="rounded-full px-3 sm:px-4 py-1.5 text-[11px] sm:text-[12px] font-medium text-[#1c1e21] flex-1 sm:w-72 min-w-[120px] flex items-center shadow-xs"
+                    className="rounded-full px-3 sm:px-4 xl:px-5 py-1.5 xl:py-2 text-[11px] sm:text-[12px] xl:text-[13px] 2xl:text-[14px] font-medium text-[#1c1e21] flex-1 sm:w-72 xl:w-88 2xl:w-96 min-w-[120px] flex items-center shadow-xs"
                     style={{
                       background: `repeating-linear-gradient(
                         -45deg,
@@ -281,7 +281,7 @@ export function MaverxDashboard() {
                   </div>
 
                   {/* Output 10% clean outlined pill */}
-                  <div className="border border-black/[0.18] bg-transparent text-[#1a1a1a] text-[11px] sm:text-[12px] font-medium px-2.5 sm:px-4 py-1.5 rounded-full w-14 sm:w-[62px] text-center shrink-0">
+                  <div className="border border-black/[0.18] bg-transparent text-[#1a1a1a] text-[11px] sm:text-[12px] xl:text-[13px] 2xl:text-[14px] font-medium px-2.5 sm:px-4 xl:px-5 py-1.5 xl:py-2 rounded-full w-14 sm:w-[62px] xl:w-20 2xl:w-24 text-center shrink-0">
                     10%
                   </div>
                 </div>
@@ -289,48 +289,48 @@ export function MaverxDashboard() {
             </div>
 
             {/* Right side: 3 Big Metric Quick Stats */}
-            <div className="grid grid-cols-3 gap-2 sm:flex sm:items-center sm:gap-8 lg:gap-12 pr-2 pt-1 sm:pt-0">
+            <div className="grid grid-cols-3 gap-2 sm:flex sm:items-center sm:gap-8 lg:gap-12 xl:gap-14 2xl:gap-16 pr-2 pt-1 sm:pt-0">
               {/* 78 Employe */}
               <div className="flex flex-col">
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <div className="w-5 h-5 sm:w-5.5 sm:h-5.5 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70 shrink-0">
-                    <Users size={11} strokeWidth={1.5} />
+                <div className="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5">
+                  <div className="w-5 h-5 sm:w-5.5 sm:h-5.5 xl:w-6.5 xl:h-6.5 2xl:w-7 2xl:h-7 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70 shrink-0">
+                    <Users size={12} strokeWidth={1.5} />
                   </div>
-                  <span className="text-[28px] sm:text-[38px] lg:text-[42px] font-light tracking-tighter text-[#1a1a1a] leading-none">
+                  <span className="text-[28px] sm:text-[38px] lg:text-[42px] xl:text-[48px] 2xl:text-[54px] font-light tracking-tighter text-[#1a1a1a] leading-none">
                     78
                   </span>
                 </div>
-                <span className="text-[10px] sm:text-[11px] text-[#666c77] font-normal pl-6 sm:pl-7.5 mt-0.5 sm:-mt-1">
+                <span className="text-[10px] sm:text-[11px] xl:text-[12px] 2xl:text-[13px] text-[#666c77] font-normal pl-6 sm:pl-7.5 xl:pl-8.5 2xl:pl-9 mt-0.5 sm:-mt-1">
                   Employe
                 </span>
               </div>
 
               {/* 56 Hirings */}
               <div className="flex flex-col">
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <div className="w-5 h-5 sm:w-5.5 sm:h-5.5 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70 shrink-0">
-                    <UserPlus size={11} strokeWidth={1.5} />
+                <div className="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5">
+                  <div className="w-5 h-5 sm:w-5.5 sm:h-5.5 xl:w-6.5 xl:h-6.5 2xl:w-7 2xl:h-7 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70 shrink-0">
+                    <UserPlus size={12} strokeWidth={1.5} />
                   </div>
-                  <span className="text-[28px] sm:text-[38px] lg:text-[42px] font-light tracking-tighter text-[#1a1a1a] leading-none">
+                  <span className="text-[28px] sm:text-[38px] lg:text-[42px] xl:text-[48px] 2xl:text-[54px] font-light tracking-tighter text-[#1a1a1a] leading-none">
                     56
                   </span>
                 </div>
-                <span className="text-[10px] sm:text-[11px] text-[#666c77] font-normal pl-6 sm:pl-7.5 mt-0.5 sm:-mt-1">
+                <span className="text-[10px] sm:text-[11px] xl:text-[12px] 2xl:text-[13px] text-[#666c77] font-normal pl-6 sm:pl-7.5 xl:pl-8.5 2xl:pl-9 mt-0.5 sm:-mt-1">
                   Hirings
                 </span>
               </div>
 
               {/* 203 Projects */}
               <div className="flex flex-col">
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <div className="w-5 h-5 sm:w-5.5 sm:h-5.5 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70 shrink-0">
-                    <Laptop size={11} strokeWidth={1.5} />
+                <div className="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5">
+                  <div className="w-5 h-5 sm:w-5.5 sm:h-5.5 xl:w-6.5 xl:h-6.5 2xl:w-7 2xl:h-7 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70 shrink-0">
+                    <Laptop size={12} strokeWidth={1.5} />
                   </div>
-                  <span className="text-[28px] sm:text-[38px] lg:text-[42px] font-light tracking-tighter text-[#1a1a1a] leading-none">
+                  <span className="text-[28px] sm:text-[38px] lg:text-[42px] xl:text-[48px] 2xl:text-[54px] font-light tracking-tighter text-[#1a1a1a] leading-none">
                     203
                   </span>
                 </div>
-                <span className="text-[10px] sm:text-[11px] text-[#666c77] font-normal pl-6 sm:pl-7.5 mt-0.5 sm:-mt-1">
+                <span className="text-[10px] sm:text-[11px] xl:text-[12px] 2xl:text-[13px] text-[#666c77] font-normal pl-6 sm:pl-7.5 xl:pl-8.5 2xl:pl-9 mt-0.5 sm:-mt-1">
                   Projects
                 </span>
               </div>
@@ -339,11 +339,11 @@ export function MaverxDashboard() {
         </section>
 
         {/* ===================== MAIN DASHBOARD GRID ===================== */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 items-start mt-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 xl:gap-5 2xl:gap-6 items-start mt-2 xl:mt-4">
           {/* ==================== COLUMN 1 (Left): Profile + Accordion ==================== */}
-          <div className="lg:col-span-3 flex flex-col gap-4">
+          <div className="lg:col-span-3 flex flex-col gap-4 xl:gap-5 2xl:gap-6">
             {/* Milton Profile Card */}
-            <div className="rounded-[28px] overflow-hidden relative h-[218px] shadow-xs border border-white/80 bg-[#042f2e]">
+            <div className="rounded-[28px] xl:rounded-[32px] overflow-hidden relative h-[218px] xl:h-[248px] 2xl:h-[275px] shadow-xs border border-white/80 bg-[#042f2e]">
               <img
                 src="./assets/founder-avatar.png?v=2"
                 alt="Milton"
@@ -351,7 +351,7 @@ export function MaverxDashboard() {
               />
               {/* Clean bottom gradient vignette */}
               <div
-                className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+                className="absolute inset-x-0 bottom-0 h-28 xl:h-32 pointer-events-none"
                 style={{
                   background:
                     "linear-gradient(to top, rgba(4, 47, 46, 0.95) 0%, rgba(4, 47, 46, 0.65) 45%, rgba(4, 47, 46, 0.25) 70%, transparent 100%)",
@@ -359,12 +359,12 @@ export function MaverxDashboard() {
               />
 
               {/* Card Footer Content */}
-              <div className="absolute bottom-3.5 left-4 right-4 flex items-end justify-between z-10">
+              <div className="absolute bottom-3.5 xl:bottom-5 left-4 xl:left-5 right-4 xl:right-5 flex items-end justify-between z-10">
                 <div>
-                  <h3 className="text-white font-medium text-[15px] leading-tight drop-shadow-xs">
+                  <h3 className="text-white font-medium text-[15px] xl:text-[17px] 2xl:text-[19px] leading-tight drop-shadow-xs">
                     Milton
                   </h3>
-                  <p className="text-white/80 text-[11px] font-normal mt-0.5">
+                  <p className="text-white/80 text-[11px] xl:text-[12px] 2xl:text-[13px] font-normal mt-0.5">
                     Founder & Lead Engineer
                   </p>
                 </div>
@@ -372,13 +372,13 @@ export function MaverxDashboard() {
             </div>
 
             {/* Management Accordion Card */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-[26px] p-5 shadow-xs border border-white/80 flex flex-col gap-3">
+            <div className="bg-white/80 backdrop-blur-sm rounded-[26px] xl:rounded-[30px] p-5 xl:p-6 2xl:p-7 shadow-xs border border-white/80 flex flex-col gap-3 xl:gap-3.5 2xl:gap-4">
               {/* Item 1: Pension contributions */}
               <button
                 onClick={() => toggleAccordion("pension")}
                 className="w-full flex items-center justify-between text-left py-0.5 group cursor-pointer"
               >
-                <span className="text-xs font-semibold text-neutral-800 group-hover:text-black">
+                <span className="text-xs xl:text-[13px] 2xl:text-[14px] font-semibold text-neutral-800 group-hover:text-black">
                   Pension contributions
                 </span>
                 <ChevronDown
@@ -396,7 +396,7 @@ export function MaverxDashboard() {
                   onClick={() => toggleAccordion("devices")}
                   className="w-full flex items-center justify-between text-left py-0.5 group cursor-pointer"
                 >
-                  <span className="text-xs font-semibold text-neutral-800 group-hover:text-black">
+                  <span className="text-xs xl:text-[13px] 2xl:text-[14px] font-semibold text-neutral-800 group-hover:text-black">
                     Devices
                   </span>
                   <ChevronUp
@@ -410,8 +410,8 @@ export function MaverxDashboard() {
 
                 {expandedSection === "devices" && (
                   <div className="mt-2 flex items-center justify-between pl-0.5 pr-1 py-1">
-                    <div className="flex items-center gap-3">
-                      <div className="w-11 h-8 rounded flex items-center justify-center overflow-hidden">
+                    <div className="flex items-center gap-3 xl:gap-3.5">
+                      <div className="w-11 h-8 xl:w-13 xl:h-9.5 rounded flex items-center justify-center overflow-hidden">
                         <img
                           src="./assets/macbook.png"
                           alt="MacBook Air"
@@ -419,10 +419,10 @@ export function MaverxDashboard() {
                         />
                       </div>
                       <div>
-                        <p className="text-xs font-semibold text-[#1a1a1a] leading-tight">
+                        <p className="text-xs xl:text-[13px] 2xl:text-[14px] font-semibold text-[#1a1a1a] leading-tight">
                           MacBook Air
                         </p>
-                        <p className="text-[10px] text-[#888e99] font-normal mt-0.5">
+                        <p className="text-[10px] xl:text-[11px] 2xl:text-[12px] text-[#888e99] font-normal mt-0.5">
                           Version M1
                         </p>
                       </div>
@@ -439,7 +439,7 @@ export function MaverxDashboard() {
                 onClick={() => toggleAccordion("compensation")}
                 className="w-full flex items-center justify-between text-left py-0.5 group cursor-pointer"
               >
-                <span className="text-xs font-semibold text-neutral-800 group-hover:text-black">
+                <span className="text-xs xl:text-[13px] 2xl:text-[14px] font-semibold text-neutral-800 group-hover:text-black">
                   Compensation Summary
                 </span>
                 <ChevronDown
@@ -456,7 +456,7 @@ export function MaverxDashboard() {
                 onClick={() => toggleAccordion("benefits")}
                 className="w-full flex items-center justify-between text-left py-0.5 group cursor-pointer"
               >
-                <span className="text-xs font-semibold text-neutral-800 group-hover:text-black">
+                <span className="text-xs xl:text-[13px] 2xl:text-[14px] font-semibold text-neutral-800 group-hover:text-black">
                   Employee Benefits
                 </span>
                 <ChevronDown
@@ -474,109 +474,109 @@ export function MaverxDashboard() {
           </div>
 
           {/* ==================== MIDDLE AREA (Span 6): Progress + Time Tracker + Schedule ==================== */}
-          <div className="lg:col-span-6 flex flex-col gap-4">
+          <div className="lg:col-span-6 flex flex-col gap-4 xl:gap-5 2xl:gap-6">
             {/* Top Row: Progress + Time Tracker */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-5 2xl:gap-6">
               {/* Progress Card */}
-              <div className="bg-white/85 rounded-[26px] p-5 shadow-xs border border-white/80 flex flex-col justify-between h-[218px]">
+              <div className="bg-white/85 rounded-[26px] xl:rounded-[30px] p-5 xl:p-6 2xl:p-7 shadow-xs border border-white/80 flex flex-col justify-between h-[218px] xl:h-[248px] 2xl:h-[275px]">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-neutral-800">
+                  <span className="text-sm xl:text-[15px] 2xl:text-base font-semibold text-neutral-800">
                     Progress
                   </span>
-                  <button className="w-6 h-6 rounded-full border border-neutral-200/90 flex items-center justify-center text-neutral-700 hover:bg-neutral-50 transition-colors cursor-pointer">
+                  <button className="w-6 h-6 xl:w-7 xl:h-7 rounded-full border border-neutral-200/90 flex items-center justify-center text-neutral-700 hover:bg-neutral-50 transition-colors cursor-pointer">
                     <ArrowUpRight size={12} strokeWidth={2} />
                   </button>
                 </div>
 
                 {/* Metric */}
                 <div className="flex items-baseline gap-2 mt-1">
-                  <span className="text-3xl font-light tracking-tight text-neutral-900">
+                  <span className="text-3xl xl:text-4xl 2xl:text-[42px] font-light tracking-tight text-neutral-900">
                     6.1 h
                   </span>
-                  <div className="text-[10px] leading-tight text-[#888e99] font-normal">
+                  <div className="text-[10px] xl:text-[11px] 2xl:text-xs leading-tight text-[#888e99] font-normal">
                     <p>Work Time</p>
                     <p>this week</p>
                   </div>
                 </div>
 
                 {/* Activity Bar Chart with faint dashed vertical guides */}
-                <div className="grid grid-cols-7 gap-2 items-end pt-3 relative">
+                <div className="grid grid-cols-7 gap-2 xl:gap-3 items-end pt-3 relative">
                   {/* Sunday */}
                   <div className="flex flex-col items-center gap-1.5 relative">
                     <div className="absolute inset-y-0 w-px border-l border-dashed border-black/[0.08] pointer-events-none -z-0" />
-                    <div className="w-1.5 h-6 rounded-full bg-neutral-200 z-10" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-neutral-300 z-10" />
-                    <span className="text-[10px] text-neutral-400 font-normal">S</span>
+                    <div className="w-1.5 xl:w-2 h-6 xl:h-8 rounded-full bg-neutral-200 z-10" />
+                    <div className="w-1.5 xl:w-2 h-1.5 xl:h-2 rounded-full bg-neutral-300 z-10" />
+                    <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 font-normal">S</span>
                   </div>
 
                   {/* Monday */}
                   <div className="flex flex-col items-center gap-1.5 relative">
                     <div className="absolute inset-y-0 w-px border-l border-dashed border-black/[0.08] pointer-events-none -z-0" />
-                    <div className="w-1.5 h-13 rounded-full bg-[#1c1e21] z-10" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#1c1e21] z-10" />
-                    <span className="text-[10px] text-neutral-400 font-normal">M</span>
+                    <div className="w-1.5 xl:w-2 h-13 xl:h-16 rounded-full bg-[#1c1e21] z-10" />
+                    <div className="w-1.5 xl:w-2 h-1.5 xl:h-2 rounded-full bg-[#1c1e21] z-10" />
+                    <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 font-normal">M</span>
                   </div>
 
                   {/* Tuesday */}
                   <div className="flex flex-col items-center gap-1.5 relative">
                     <div className="absolute inset-y-0 w-px border-l border-dashed border-black/[0.08] pointer-events-none -z-0" />
-                    <div className="w-1.5 h-9 rounded-full bg-[#1c1e21] z-10" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#1c1e21] z-10" />
-                    <span className="text-[10px] text-neutral-400 font-normal">T</span>
+                    <div className="w-1.5 xl:w-2 h-9 xl:h-12 rounded-full bg-[#1c1e21] z-10" />
+                    <div className="w-1.5 xl:w-2 h-1.5 xl:h-2 rounded-full bg-[#1c1e21] z-10" />
+                    <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 font-normal">T</span>
                   </div>
 
                   {/* Wednesday */}
                   <div className="flex flex-col items-center gap-1.5 relative">
                     <div className="absolute inset-y-0 w-px border-l border-dashed border-black/[0.08] pointer-events-none -z-0" />
-                    <div className="w-1.5 h-7 rounded-full bg-[#1c1e21] z-10" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#1c1e21] z-10" />
-                    <span className="text-[10px] text-neutral-400 font-normal">W</span>
+                    <div className="w-1.5 xl:w-2 h-7 xl:h-10 rounded-full bg-[#1c1e21] z-10" />
+                    <div className="w-1.5 xl:w-2 h-1.5 xl:h-2 rounded-full bg-[#1c1e21] z-10" />
+                    <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 font-normal">W</span>
                   </div>
 
                   {/* Thursday */}
                   <div className="flex flex-col items-center gap-1.5 relative">
                     <div className="absolute inset-y-0 w-px border-l border-dashed border-black/[0.08] pointer-events-none -z-0" />
-                    <div className="w-1.5 h-11 rounded-full bg-[#1c1e21] z-10" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#1c1e21] z-10" />
-                    <span className="text-[10px] text-neutral-400 font-normal">T</span>
+                    <div className="w-1.5 xl:w-2 h-11 xl:h-14 rounded-full bg-[#1c1e21] z-10" />
+                    <div className="w-1.5 xl:w-2 h-1.5 xl:h-2 rounded-full bg-[#1c1e21] z-10" />
+                    <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 font-normal">T</span>
                   </div>
 
                   {/* Friday (Highlighted with Tooltip and brand green bar) */}
                   <div className="flex flex-col items-center gap-1.5 relative">
                     <div className="absolute inset-y-0 w-px border-l border-dashed border-black/[0.08] pointer-events-none -z-0" />
                     {/* Floating Tooltip Pill */}
-                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#c8ff00] text-[#0a0a0a] text-[9.5px] font-bold px-2 py-0.5 rounded-full shadow-xs whitespace-nowrap z-20">
+                    <div className="absolute -top-6 xl:-top-7 left-1/2 -translate-x-1/2 bg-[#c8ff00] text-[#0a0a0a] text-[9.5px] xl:text-[10.5px] 2xl:text-[11.5px] font-bold px-2 xl:px-2.5 py-0.5 xl:py-1 rounded-full shadow-xs whitespace-nowrap z-20">
                       5h 23m
                     </div>
-                    <div className="w-1.5 h-14 rounded-full bg-[#c8ff00] z-10" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#c8ff00] z-10" />
-                    <span className="text-[10px] text-neutral-400 font-normal">F</span>
+                    <div className="w-1.5 xl:w-2 h-14 xl:h-18 2xl:h-20 rounded-full bg-[#c8ff00] z-10" />
+                    <div className="w-1.5 xl:w-2 h-1.5 xl:h-2 rounded-full bg-[#c8ff00] z-10" />
+                    <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 font-normal">F</span>
                   </div>
 
                   {/* Saturday */}
                   <div className="flex flex-col items-center gap-1.5 relative">
                     <div className="absolute inset-y-0 w-px border-l border-dashed border-black/[0.08] pointer-events-none -z-0" />
-                    <div className="w-1.5 h-6 rounded-full bg-neutral-200 z-10" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-neutral-300 z-10" />
-                    <span className="text-[10px] text-neutral-400 font-normal">S</span>
+                    <div className="w-1.5 xl:w-2 h-6 xl:h-8 rounded-full bg-neutral-200 z-10" />
+                    <div className="w-1.5 xl:w-2 h-1.5 xl:h-2 rounded-full bg-neutral-300 z-10" />
+                    <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 font-normal">S</span>
                   </div>
                 </div>
               </div>
 
               {/* Time Tracker Card */}
-              <div className="bg-white/85 rounded-[26px] p-5 shadow-xs border border-white/80 flex flex-col justify-between h-[218px]">
+              <div className="bg-white/85 rounded-[26px] xl:rounded-[30px] p-5 xl:p-6 2xl:p-7 shadow-xs border border-white/80 flex flex-col justify-between h-[218px] xl:h-[248px] 2xl:h-[275px]">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-neutral-800">
+                  <span className="text-sm xl:text-[15px] 2xl:text-base font-semibold text-neutral-800">
                     Time tracker
                   </span>
-                  <button className="w-6 h-6 rounded-full border border-neutral-200/90 flex items-center justify-center text-neutral-700 hover:bg-neutral-50 transition-colors cursor-pointer">
+                  <button className="w-6 h-6 xl:w-7 xl:h-7 rounded-full border border-neutral-200/90 flex items-center justify-center text-neutral-700 hover:bg-neutral-50 transition-colors cursor-pointer">
                     <ArrowUpRight size={12} strokeWidth={2} />
                   </button>
                 </div>
 
                 {/* Thick Bold Golden Tachymeter Circular Dial */}
                 <div className="flex items-center justify-center my-0.5 relative">
-                  <div className="relative w-28 h-28 flex items-center justify-center">
+                  <div className="relative w-28 h-28 xl:w-34 xl:h-34 2xl:w-38 2xl:h-38 flex items-center justify-center">
                     <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                       {/* Radial Tick Marks along perimeter */}
                       {ticks.map((deg, i) => {
@@ -614,10 +614,10 @@ export function MaverxDashboard() {
 
                     {/* Centered Readout */}
                     <div className="absolute flex flex-col items-center justify-center text-center">
-                      <span className="text-[25px] font-light tracking-tight text-[#1a1a1a] leading-none">
+                      <span className="text-[25px] xl:text-[29px] 2xl:text-[33px] font-light tracking-tight text-[#1a1a1a] leading-none">
                         {formatTime(seconds)}
                       </span>
-                      <span className="text-[10px] text-[#717680] font-normal mt-1">
+                      <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-[#717680] font-normal mt-1">
                         Work Time
                       </span>
                     </div>
@@ -627,7 +627,7 @@ export function MaverxDashboard() {
                 {/* Bottom Controls */}
                 <div className="flex items-center justify-between">
                   {/* Play / Pause pill */}
-                  <div className="border border-black/[0.1] bg-white rounded-full px-3.5 py-1.5 flex items-center gap-3 shadow-xs">
+                  <div className="border border-black/[0.1] bg-white rounded-full px-3.5 xl:px-4 py-1.5 xl:py-2 flex items-center gap-3 xl:gap-4 shadow-xs">
                     <button
                       onClick={() => setTimerRunning(true)}
                       className={`cursor-pointer transition-colors ${
@@ -653,7 +653,7 @@ export function MaverxDashboard() {
                   </div>
 
                   {/* Stopwatch icon button */}
-                  <button className="w-8 h-8 rounded-full bg-[#1d1f22] text-white flex items-center justify-center shadow-xs hover:bg-black transition-colors cursor-pointer">
+                  <button className="w-8 h-8 xl:w-9 xl:h-9 2xl:w-10 2xl:h-10 rounded-full bg-[#1d1f22] text-white flex items-center justify-center shadow-xs hover:bg-black transition-colors cursor-pointer">
                     <Timer size={13} strokeWidth={1.75} />
                   </button>
                 </div>
@@ -661,16 +661,16 @@ export function MaverxDashboard() {
             </div>
 
             {/* Bottom Row: Calendar & Schedule Card */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-[26px] p-4 sm:p-5 shadow-xs border border-white/80 flex flex-col justify-between min-h-[240px] sm:h-[230px] overflow-hidden">
+            <div className="bg-white/80 backdrop-blur-sm rounded-[26px] xl:rounded-[30px] p-4 sm:p-5 xl:p-6 2xl:p-7 shadow-xs border border-white/80 flex flex-col justify-between min-h-[240px] sm:h-[230px] xl:h-[260px] 2xl:h-[285px] overflow-hidden">
               {/* Header: Month selector */}
               <div className="flex items-center justify-between mb-2">
-                <button className="border border-neutral-300/80 rounded-full px-3 sm:px-3.5 py-1 text-[11px] font-medium text-neutral-700 bg-white/50 hover:bg-white/80 transition-colors shadow-xs cursor-pointer">
+                <button className="border border-neutral-300/80 rounded-full px-3 sm:px-3.5 xl:px-4 py-1 xl:py-1.5 text-[11px] xl:text-xs font-medium text-neutral-700 bg-white/50 hover:bg-white/80 transition-colors shadow-xs cursor-pointer">
                   August
                 </button>
-                <span className="text-xs font-semibold text-neutral-800">
+                <span className="text-xs xl:text-sm 2xl:text-[15px] font-semibold text-neutral-800">
                   September 2024
                 </span>
-                <button className="border border-neutral-300/80 rounded-full px-3 sm:px-3.5 py-1 text-[11px] font-medium text-neutral-700 bg-white/50 hover:bg-white/80 transition-colors shadow-xs cursor-pointer">
+                <button className="border border-neutral-300/80 rounded-full px-3 sm:px-3.5 xl:px-4 py-1 xl:py-1.5 text-[11px] xl:text-xs font-medium text-neutral-700 bg-white/50 hover:bg-white/80 transition-colors shadow-xs cursor-pointer">
                   October
                 </button>
               </div>
@@ -679,37 +679,37 @@ export function MaverxDashboard() {
               <div className="w-full overflow-x-auto scrollbar-none">
                 <div className="min-w-[320px] flex-1 relative flex flex-col justify-between pt-1">
                   {/* Day Columns Header - Exactly 6 days Mon 22 - Sat 27 */}
-                  <div className="grid grid-cols-6 text-center pl-8 sm:pl-12 pr-2">
+                  <div className="grid grid-cols-6 text-center pl-8 sm:pl-12 xl:pl-14 2xl:pl-16 pr-2">
                     <div>
-                      <span className="text-[10px] text-neutral-400 block">Mon</span>
-                      <span className="text-xs font-medium text-neutral-800">22</span>
+                      <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 block">Mon</span>
+                      <span className="text-xs xl:text-sm 2xl:text-[15px] font-medium text-neutral-800">22</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-neutral-400 block">Tue</span>
-                      <span className="text-xs font-medium text-neutral-800">23</span>
+                      <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 block">Tue</span>
+                      <span className="text-xs xl:text-sm 2xl:text-[15px] font-medium text-neutral-800">23</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-neutral-400 block">Wed</span>
-                      <span className="text-xs font-medium text-neutral-800">24</span>
+                      <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 block">Wed</span>
+                      <span className="text-xs xl:text-sm 2xl:text-[15px] font-medium text-neutral-800">24</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-neutral-400 block">Thu</span>
-                      <span className="text-xs font-medium text-neutral-800">25</span>
+                      <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 block">Thu</span>
+                      <span className="text-xs xl:text-sm 2xl:text-[15px] font-medium text-neutral-800">25</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-neutral-400 block">Fri</span>
-                      <span className="text-xs font-medium text-neutral-800">26</span>
+                      <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 block">Fri</span>
+                      <span className="text-xs xl:text-sm 2xl:text-[15px] font-medium text-neutral-800">26</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-neutral-400 block">Sat</span>
-                      <span className="text-xs font-medium text-neutral-800">27</span>
+                      <span className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 block">Sat</span>
+                      <span className="text-xs xl:text-sm 2xl:text-[15px] font-medium text-neutral-800">27</span>
                     </div>
                   </div>
 
                   {/* Grid Body with Time Labels & Dotted Lines */}
-                  <div className="relative flex-1 mt-1 flex flex-col justify-between py-1 min-h-[110px]">
+                  <div className="relative flex-1 mt-1 flex flex-col justify-between py-1 min-h-[110px] xl:min-h-[130px] 2xl:min-h-[150px]">
                     {/* Vertical Dotted Guides across 6 days */}
-                    <div className="absolute inset-0 pl-8 sm:pl-12 pr-2 grid grid-cols-6 pointer-events-none">
+                    <div className="absolute inset-0 pl-8 sm:pl-12 xl:pl-14 2xl:pl-16 pr-2 grid grid-cols-6 pointer-events-none">
                       <div className="border-r border-dotted border-neutral-300/60" />
                       <div className="border-r border-dotted border-neutral-300/60" />
                       <div className="border-r border-dotted border-neutral-300/60" />
@@ -719,59 +719,59 @@ export function MaverxDashboard() {
                     </div>
 
                     {/* Time Labels */}
-                    <div className="flex items-center text-[10px] text-neutral-400 h-6 pl-0.5">
+                    <div className="flex items-center text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 h-6 xl:h-7 2xl:h-8 pl-0.5">
                       8:00 am
                     </div>
-                    <div className="flex items-center text-[10px] text-neutral-400 h-6 pl-0.5">
+                    <div className="flex items-center text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 h-6 xl:h-7 2xl:h-8 pl-0.5">
                       9:00 am
                     </div>
-                    <div className="flex items-center text-[10px] text-neutral-400 h-6 pl-0.5">
+                    <div className="flex items-center text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 h-6 xl:h-7 2xl:h-8 pl-0.5">
                       10:00 am
                     </div>
-                    <div className="flex items-center text-[10px] text-neutral-400 h-6 pl-0.5">
+                    <div className="flex items-center text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 h-6 xl:h-7 2xl:h-8 pl-0.5">
                       11:00 am
                     </div>
 
                     {/* Event 1: Weekly Team Sync (spanning Tue 23 - Wed 24) */}
-                    <div className="absolute top-1 left-[24%] right-[38%] sm:right-[42%] bg-[#1e2023] text-white rounded-xl sm:rounded-2xl px-2.5 sm:px-3.5 py-1.5 sm:py-2 shadow-md border border-neutral-700/50 flex items-center justify-between gap-1.5 sm:gap-2.5 z-10">
+                    <div className="absolute top-1 left-[24%] right-[38%] sm:right-[42%] bg-[#1e2023] text-white rounded-xl sm:rounded-2xl px-2.5 sm:px-3.5 xl:px-4 py-1.5 sm:py-2 xl:py-2.5 shadow-md border border-neutral-700/50 flex items-center justify-between gap-1.5 sm:gap-2.5 z-10">
                       <div className="min-w-0 flex-1">
-                        <p className="text-[10px] sm:text-[11px] font-semibold text-white leading-tight truncate">
+                        <p className="text-[10px] sm:text-[11px] xl:text-[12px] 2xl:text-[13px] font-semibold text-white leading-tight truncate">
                           Weekly Team Sync
                         </p>
-                        <p className="text-[8.5px] sm:text-[9px] text-neutral-400 leading-tight mt-0.5 truncate">
+                        <p className="text-[8.5px] sm:text-[9px] xl:text-[10px] 2xl:text-[11px] text-neutral-400 leading-tight mt-0.5 truncate">
                           Discuss progress
                         </p>
                       </div>
                       {/* 3 Circular Avatar Stack */}
                       <div className="flex items-center -space-x-1.5 shrink-0">
-                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full border border-[#1e2023] overflow-hidden bg-[#c8ff00]">
+                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 xl:w-6 xl:h-6 rounded-full border border-[#1e2023] overflow-hidden bg-[#c8ff00]">
                           <img src="./assets/team_avatars.png" className="w-full h-full object-cover" alt="" />
                         </div>
-                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full border border-[#1e2023] overflow-hidden bg-rose-300">
+                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 xl:w-6 xl:h-6 rounded-full border border-[#1e2023] overflow-hidden bg-rose-300">
                           <img src="./assets/team_avatars.png" className="w-full h-full object-cover scale-125" alt="" />
                         </div>
-                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full border border-[#1e2023] overflow-hidden bg-sky-300">
+                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 xl:w-6 xl:h-6 rounded-full border border-[#1e2023] overflow-hidden bg-sky-300">
                           <img src="./assets/team_avatars.png" className="w-full h-full object-cover scale-150" alt="" />
                         </div>
                       </div>
                     </div>
 
                     {/* Event 2: Onboarding Session (spanning Thu 25 - Fri 26) */}
-                    <div className="absolute top-[48%] left-[54%] sm:left-[58%] right-[4%] sm:right-[8%] bg-white text-neutral-900 rounded-xl sm:rounded-2xl px-2.5 sm:px-3.5 py-1.5 shadow-sm border border-neutral-200/90 flex items-center justify-between gap-1.5 sm:gap-2.5 z-10">
+                    <div className="absolute top-[48%] left-[54%] sm:left-[58%] right-[4%] sm:right-[8%] bg-white text-neutral-900 rounded-xl sm:rounded-2xl px-2.5 sm:px-3.5 xl:px-4 py-1.5 xl:py-2 shadow-sm border border-neutral-200/90 flex items-center justify-between gap-1.5 sm:gap-2.5 z-10">
                       <div className="min-w-0 flex-1">
-                        <p className="text-[10px] sm:text-[11px] font-semibold text-neutral-900 leading-tight truncate">
+                        <p className="text-[10px] sm:text-[11px] xl:text-[12px] 2xl:text-[13px] font-semibold text-neutral-900 leading-tight truncate">
                           Onboarding Session
                         </p>
-                        <p className="text-[8.5px] sm:text-[9px] text-neutral-500 leading-tight mt-0.5 truncate">
+                        <p className="text-[8.5px] sm:text-[9px] xl:text-[10px] 2xl:text-[11px] text-neutral-500 leading-tight mt-0.5 truncate">
                           Intro for new hires
                         </p>
                       </div>
                       {/* 2 Circular Avatar Stack */}
                       <div className="flex items-center -space-x-1.5 shrink-0">
-                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full border border-white overflow-hidden bg-teal-300">
+                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 xl:w-6 xl:h-6 rounded-full border border-white overflow-hidden bg-teal-300">
                           <img src="./assets/onboarding_avatars.png" className="w-full h-full object-cover" alt="" />
                         </div>
-                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full border border-white overflow-hidden bg-emerald-300">
+                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 xl:w-6 xl:h-6 rounded-full border border-white overflow-hidden bg-emerald-300">
                           <img src="./assets/onboarding_avatars.png" className="w-full h-full object-cover scale-125" alt="" />
                         </div>
                       </div>
@@ -783,77 +783,77 @@ export function MaverxDashboard() {
           </div>
 
           {/* ==================== COLUMN 4 (Right): Onboarding Top + Onboarding Task ==================== */}
-          <div className="lg:col-span-3 flex flex-col gap-4">
+          <div className="lg:col-span-3 flex flex-col gap-4 xl:gap-5 2xl:gap-6">
             {/* Onboarding Metric Card */}
-            <div className="bg-white/80 rounded-[26px] p-5 shadow-xs border border-white/80 flex flex-col justify-between">
+            <div className="bg-white/80 rounded-[26px] xl:rounded-[30px] p-5 xl:p-6 2xl:p-7 shadow-xs border border-white/80 flex flex-col justify-between">
               <div className="flex items-center justify-between">
-                <span className="text-[14px] font-semibold text-[#1a1a1a]">
+                <span className="text-[14px] xl:text-[16px] 2xl:text-[17px] font-semibold text-[#1a1a1a]">
                   Onboarding
                 </span>
-                <span className="text-[26px] font-light text-[#1a1a1a] tracking-tight">
+                <span className="text-[26px] xl:text-[30px] 2xl:text-[34px] font-light text-[#1a1a1a] tracking-tight">
                   18%
                 </span>
               </div>
 
               <div className="mt-2.5">
                 {/* Labels directly aligned above their segments */}
-                <div className="flex items-center gap-1.5 text-[10px] font-normal text-[#666] mb-1.5">
+                <div className="flex items-center gap-1.5 text-[10px] xl:text-[11px] 2xl:text-xs font-normal text-[#666] mb-1.5">
                   <span className="flex-1 text-center">30%</span>
-                  <span className="w-14 text-center">25%</span>
-                  <span className="w-7 text-center">0%</span>
+                  <span className="w-14 xl:w-16 text-center">25%</span>
+                  <span className="w-7 xl:w-8 text-center">0%</span>
                 </div>
 
                 {/* Segmented Bar */}
                 <div className="flex items-center gap-1.5">
                   {/* Brand Green Task segment */}
-                  <div className="bg-[#c8ff00] rounded-xl h-7 px-3 flex-1 flex items-center justify-center shadow-xs">
-                    <span className="text-[11px] font-semibold text-[#0a0a0a]">Task</span>
+                  <div className="bg-[#c8ff00] rounded-xl h-7 xl:h-8 2xl:h-9 px-3 flex-1 flex items-center justify-center shadow-xs">
+                    <span className="text-[11px] xl:text-[12px] 2xl:text-[13px] font-semibold text-[#0a0a0a]">Task</span>
                   </div>
 
                   {/* Charcoal segment */}
-                  <div className="bg-[#1d1f22] rounded-xl h-7 w-14 shadow-xs" />
+                  <div className="bg-[#1d1f22] rounded-xl h-7 xl:h-8 2xl:h-9 w-14 xl:w-16 shadow-xs" />
 
                   {/* Gray segment */}
-                  <div className="bg-[#d2d5dc] border border-black/[0.08] rounded-xl h-7 w-7" />
+                  <div className="bg-[#d2d5dc] border border-black/[0.08] rounded-xl h-7 xl:h-8 2xl:h-9 w-7 xl:w-8" />
                 </div>
               </div>
             </div>
 
             {/* Onboarding Task Dark Stack Card */}
-            <div className="relative pt-2.5">
+            <div className="relative pt-2.5 xl:pt-3">
               {/* Stacked curved tab under-layer peeking out behind the dark card */}
-              <div className="absolute top-0 inset-x-5 h-5 bg-[#42464e] rounded-t-[20px] -z-0 opacity-90" />
+              <div className="absolute top-0 inset-x-5 xl:inset-x-6 h-5 xl:h-6 bg-[#42464e] rounded-t-[20px] xl:rounded-t-[24px] -z-0 opacity-90" />
 
               {/* Main Dark Card */}
-              <div className="relative z-10 bg-[#222428] text-white rounded-[28px] p-5 shadow-xl border border-white/5 flex flex-col gap-3.5">
+              <div className="relative z-10 bg-[#222428] text-white rounded-[28px] xl:rounded-[32px] p-5 xl:p-6 2xl:p-7 shadow-xl border border-white/5 flex flex-col gap-3.5 xl:gap-4.5 2xl:gap-5">
                 <div className="flex items-center justify-between">
-                  <span className="text-[14px] font-semibold text-white">
+                  <span className="text-[14px] xl:text-[16px] 2xl:text-[17px] font-semibold text-white">
                     Onboarding Task
                   </span>
-                  <span className="text-[22px] font-light text-neutral-200 tracking-tight">
+                  <span className="text-[22px] xl:text-[25px] 2xl:text-[28px] font-light text-neutral-200 tracking-tight">
                     {completedCount}/8
                   </span>
                 </div>
 
                 {/* Tasks List */}
-                <div className="flex flex-col gap-2.5">
+                <div className="flex flex-col gap-2.5 xl:gap-3 2xl:gap-3.5">
                   {tasks.map((task) => {
                     const IconComponent = task.icon;
                     return (
                       <div
                         key={task.id}
                         onClick={() => toggleTask(task.id)}
-                        className="flex items-center justify-between py-1 px-1 rounded-xl hover:bg-white/5 transition-colors cursor-pointer group"
+                        className="flex items-center justify-between py-1 xl:py-1.5 2xl:py-2 px-1 xl:px-1.5 rounded-xl hover:bg-white/5 transition-colors cursor-pointer group"
                       >
-                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-neutral-300 group-hover:text-white transition-colors shrink-0">
+                        <div className="flex items-center gap-3 xl:gap-3.5">
+                          <div className="w-8 h-8 xl:w-9 xl:h-9 2xl:w-10 2xl:h-10 rounded-full bg-white/10 flex items-center justify-center text-neutral-300 group-hover:text-white transition-colors shrink-0">
                             <IconComponent size={14} strokeWidth={1.5} />
                           </div>
                           <div>
-                            <p className="text-xs font-medium text-white leading-tight">
+                            <p className="text-xs xl:text-[13px] 2xl:text-[14px] font-medium text-white leading-tight">
                               {task.title}
                             </p>
-                            <p className="text-[10px] text-neutral-400 leading-tight mt-0.5">
+                            <p className="text-[10px] xl:text-[11px] 2xl:text-xs text-neutral-400 leading-tight mt-0.5">
                               {task.time}
                             </p>
                           </div>
@@ -862,7 +862,7 @@ export function MaverxDashboard() {
                         {/* Status Checkbox / Indicator */}
                         <div>
                           {task.completed ? (
-                            <div className="w-4.5 h-4.5 rounded-full bg-[#c8ff00] flex items-center justify-center shadow-xs">
+                            <div className="w-4.5 h-4.5 xl:w-5 xl:h-5 rounded-full bg-[#c8ff00] flex items-center justify-center shadow-xs">
                               <Check
                                 size={10}
                                 strokeWidth={3}
@@ -870,7 +870,7 @@ export function MaverxDashboard() {
                               />
                             </div>
                           ) : (
-                            <div className="w-4.5 h-4.5 rounded-full border border-[#383d46] bg-transparent group-hover:border-neutral-400 transition-colors" />
+                            <div className="w-4.5 h-4.5 xl:w-5 xl:h-5 rounded-full border border-[#383d46] bg-transparent group-hover:border-neutral-400 transition-colors" />
                           )}
                         </div>
                       </div>
