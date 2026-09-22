@@ -149,8 +149,8 @@ export function MaverxDashboard() {
         <header className="flex flex-wrap items-center justify-between gap-4 pb-5">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="border border-black/[0.12] rounded-full px-5 py-1.5 text-[17px] font-normal tracking-tight text-[#1a1a1a] bg-white/50 backdrop-blur-xs shadow-xs">
-              Maverx
+            <div className="border border-black/[0.12] rounded-full px-5 py-1.5 text-[17px] font-semibold tracking-tight text-[#1a1a1a] bg-white/50 backdrop-blur-xs shadow-xs">
+              Miltomy
             </div>
           </div>
 
@@ -292,22 +292,19 @@ export function MaverxDashboard() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 items-start mt-2">
           {/* ==================== COLUMN 1 (Left): Profile + Accordion ==================== */}
           <div className="lg:col-span-3 flex flex-col gap-4">
-            {/* Lora Piterson Profile Card */}
-            <div className="rounded-[28px] overflow-hidden relative h-[218px] shadow-xs border border-white/80 bg-[#dfdeda]">
+            {/* Milton Profile Card */}
+            <div className="rounded-[28px] overflow-hidden relative h-[218px] shadow-xs border border-white/80 bg-[#1e293b]">
               <img
-                src="/assets/lora_full.png"
-                alt="Lora Piterson"
-                className="w-full h-full object-cover object-center"
-                style={{
-                  filter: "sepia(0.14) brightness(1.07) contrast(1.02) saturate(1.08)",
-                }}
+                src="./assets/milton.png"
+                alt="Milton"
+                className="w-full h-full object-cover object-[center_15%]"
               />
-              {/* Clean bottom gradient vignette completely covering ghost text */}
+              {/* Clean bottom gradient vignette */}
               <div
                 className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
                 style={{
                   background:
-                    "linear-gradient(to top, #2a2016 0%, #2a2016 38%, rgba(42, 32, 22, 0.90) 60%, transparent 100%)",
+                    "linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.70) 40%, rgba(15, 23, 42, 0.30) 65%, transparent 100%)",
                 }}
               />
 
@@ -315,10 +312,10 @@ export function MaverxDashboard() {
               <div className="absolute bottom-3.5 left-4 right-4 flex items-end justify-between z-10">
                 <div>
                   <h3 className="text-white font-medium text-[15px] leading-tight drop-shadow-xs">
-                    Lora Piterson
+                    Milton
                   </h3>
                   <p className="text-white/80 text-[11px] font-normal mt-0.5">
-                    UX/UI Designer
+                    Founder & Lead Engineer
                   </p>
                 </div>
               </div>
@@ -366,7 +363,7 @@ export function MaverxDashboard() {
                     <div className="flex items-center gap-3">
                       <div className="w-11 h-8 rounded flex items-center justify-center overflow-hidden">
                         <img
-                          src="/assets/macbook.png"
+                          src="./assets/macbook.png"
                           alt="MacBook Air"
                           className="w-full h-full object-contain"
                         />
@@ -697,13 +694,13 @@ export function MaverxDashboard() {
                     {/* 3 Circular Avatar Stack */}
                     <div className="flex items-center -space-x-1.5 shrink-0">
                       <div className="w-5 h-5 rounded-full border border-[#1e2023] overflow-hidden bg-amber-400">
-                        <img src="/assets/team_avatars.png" className="w-full h-full object-cover" alt="" />
+                        <img src="./assets/team_avatars.png" className="w-full h-full object-cover" alt="" />
                       </div>
                       <div className="w-5 h-5 rounded-full border border-[#1e2023] overflow-hidden bg-rose-300">
-                        <img src="/assets/team_avatars.png" className="w-full h-full object-cover scale-125" alt="" />
+                        <img src="./assets/team_avatars.png" className="w-full h-full object-cover scale-125" alt="" />
                       </div>
                       <div className="w-5 h-5 rounded-full border border-[#1e2023] overflow-hidden bg-sky-300">
-                        <img src="/assets/team_avatars.png" className="w-full h-full object-cover scale-150" alt="" />
+                        <img src="./assets/team_avatars.png" className="w-full h-full object-cover scale-150" alt="" />
                       </div>
                     </div>
                   </div>
@@ -721,10 +718,10 @@ export function MaverxDashboard() {
                     {/* 2 Circular Avatar Stack */}
                     <div className="flex items-center -space-x-1.5 shrink-0">
                       <div className="w-5 h-5 rounded-full border border-white overflow-hidden bg-purple-300">
-                        <img src="/assets/onboarding_avatars.png" className="w-full h-full object-cover" alt="" />
+                        <img src="./assets/onboarding_avatars.png" className="w-full h-full object-cover" alt="" />
                       </div>
                       <div className="w-5 h-5 rounded-full border border-white overflow-hidden bg-emerald-300">
-                        <img src="/assets/onboarding_avatars.png" className="w-full h-full object-cover scale-125" alt="" />
+                        <img src="./assets/onboarding_avatars.png" className="w-full h-full object-cover scale-125" alt="" />
                       </div>
                     </div>
                   </div>
