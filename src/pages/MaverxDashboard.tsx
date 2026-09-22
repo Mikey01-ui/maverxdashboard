@@ -92,54 +92,54 @@ export function MaverxDashboard() {
   });
 
   return (
-    <div className="min-h-screen w-full font-sans text-neutral-900 antialiased selection:bg-purple-300 selection:text-neutral-900 relative overflow-x-hidden bg-[#faf9fe]">
+    <div className="min-h-screen w-full font-sans text-neutral-900 antialiased selection:bg-emerald-300 selection:text-neutral-900 relative overflow-x-hidden bg-[#f4fbf7]">
       {/* ===================== ANIMATED AMBIENT MESH GRADIENTS ===================== */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden -z-0" aria-hidden="true">
-        {/* Base diagonal warm-to-cool wash */}
+        {/* Base diagonal green wash */}
         <div
           className="absolute inset-0 opacity-80"
           style={{
-            background: "linear-gradient(135deg, #fff9f5 0%, #fcfbfe 30%, #f6f3fe 55%, #eee7fc 80%, #e5d6fa 100%)",
+            background: "linear-gradient(135deg, #f4fbf7 0%, #edfcf2 30%, #e6f9ed 55%, #daf6e4 80%, #bbf0cf 100%)",
           }}
         />
 
-        {/* Top-Left Ambient Orange Orb 1 */}
+        {/* Top-Left Ambient Emerald Orb 1 */}
         <div
           className="absolute -top-[18%] -left-[12%] w-[750px] h-[750px] rounded-full blur-[100px] opacity-70 animate-ambient-orange"
           style={{
-            background: "radial-gradient(circle, #fba76a 0%, #fed7aa 42%, rgba(254, 215, 170, 0.15) 68%, transparent 80%)",
+            background: "radial-gradient(circle, #34d399 0%, #a7f3d0 42%, rgba(167, 243, 208, 0.20) 68%, transparent 80%)",
           }}
         />
 
-        {/* Top-Left Pulsing Warm Apricot Halo */}
+        {/* Top-Left Pulsing Mint Halo */}
         <div
           className="absolute top-[2%] -left-[4%] w-[520px] h-[520px] rounded-full blur-[90px] opacity-55 animate-ambient-warm"
           style={{
-            background: "radial-gradient(circle, #fed7aa 0%, #ffedd5 45%, rgba(255, 237, 213, 0) 75%)",
+            background: "radial-gradient(circle, #6ee7b7 0%, #d1fae5 45%, rgba(209, 250, 229, 0) 75%)",
           }}
         />
 
-        {/* Middle-Right Floating Purple / Violet Orb */}
+        {/* Middle-Right Floating Jade Orb */}
         <div
           className="absolute top-[18%] -right-[14%] w-[820px] h-[820px] rounded-full blur-[110px] opacity-65 animate-ambient-purple"
           style={{
-            background: "radial-gradient(circle, #d8b4fe 0%, #ede9fe 40%, rgba(237, 233, 254, 0.2) 65%, transparent 75%)",
+            background: "radial-gradient(circle, #10b981 0%, #6ee7b7 40%, rgba(110, 231, 183, 0.25) 65%, transparent 75%)",
           }}
         />
 
-        {/* Lower-Right Vivid Purple Accent Orb */}
+        {/* Lower-Right Vivid Forest / Emerald Accent Orb */}
         <div
           className="absolute -bottom-[10%] right-[2%] w-[700px] h-[700px] rounded-full blur-[95px] opacity-70 animate-ambient-accent-purple"
           style={{
-            background: "radial-gradient(circle, #c084fc 0%, #f3e8ff 45%, rgba(243, 232, 255, 0.15) 70%, transparent 80%)",
+            background: "radial-gradient(circle, #059669 0%, #34d399 45%, rgba(52, 211, 153, 0.18) 70%, transparent 80%)",
           }}
         />
 
-        {/* Bottom-Left Lavender Mist */}
+        {/* Bottom-Left Sage / Mint Mist */}
         <div
           className="absolute -bottom-[8%] left-[12%] w-[550px] h-[550px] rounded-full blur-[100px] opacity-45 animate-ambient-lavender"
           style={{
-            background: "radial-gradient(circle, #ede9fe 0%, rgba(237, 233, 254, 0) 70%)",
+            background: "radial-gradient(circle, #a7f3d0 0%, rgba(167, 243, 208, 0) 70%)",
           }}
         />
       </div>
@@ -188,7 +188,7 @@ export function MaverxDashboard() {
         {/* ===================== GREETING & METRICS PIPELINE ROW ===================== */}
         <section className="pt-2 pb-5">
           <h1 className="text-[34px] sm:text-[38px] font-normal tracking-tight text-[#161719] leading-tight mb-4">
-            Welcome in, Nixtio
+            Welcome in, Milton
           </h1>
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
@@ -222,8 +222,8 @@ export function MaverxDashboard() {
                       -45deg,
                       rgba(255, 255, 255, 0.92),
                       rgba(255, 255, 255, 0.92) 3.5px,
-                      rgba(215, 220, 226, 0.42) 3.5px,
-                      rgba(215, 220, 226, 0.42) 7px
+                      rgba(167, 243, 208, 0.45) 3.5px,
+                      rgba(167, 243, 208, 0.45) 7px
                     )`,
                     border: "1px solid rgba(255, 255, 255, 0.75)",
                   }}
@@ -293,18 +293,18 @@ export function MaverxDashboard() {
           {/* ==================== COLUMN 1 (Left): Profile + Accordion ==================== */}
           <div className="lg:col-span-3 flex flex-col gap-4">
             {/* Milton Profile Card */}
-            <div className="rounded-[28px] overflow-hidden relative h-[218px] shadow-xs border border-white/80 bg-[#1e293b]">
+            <div className="rounded-[28px] overflow-hidden relative h-[218px] shadow-xs border border-white/80 bg-[#042f2e]">
               <img
                 src="./assets/milton.png"
                 alt="Milton"
-                className="w-full h-full object-cover object-[center_15%]"
+                className="w-full h-full object-cover object-[center_12%]"
               />
               {/* Clean bottom gradient vignette */}
               <div
                 className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
                 style={{
                   background:
-                    "linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.70) 40%, rgba(15, 23, 42, 0.30) 65%, transparent 100%)",
+                    "linear-gradient(to top, rgba(4, 47, 46, 0.95) 0%, rgba(4, 47, 46, 0.65) 45%, rgba(4, 47, 46, 0.25) 70%, transparent 100%)",
                 }}
               />
 
@@ -717,7 +717,7 @@ export function MaverxDashboard() {
                     </div>
                     {/* 2 Circular Avatar Stack */}
                     <div className="flex items-center -space-x-1.5 shrink-0">
-                      <div className="w-5 h-5 rounded-full border border-white overflow-hidden bg-purple-300">
+                      <div className="w-5 h-5 rounded-full border border-white overflow-hidden bg-teal-300">
                         <img src="./assets/onboarding_avatars.png" className="w-full h-full object-cover" alt="" />
                       </div>
                       <div className="w-5 h-5 rounded-full border border-white overflow-hidden bg-emerald-300">
