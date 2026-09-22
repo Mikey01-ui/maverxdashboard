@@ -209,8 +209,8 @@ export function MaverxDashboard() {
                   15%
                 </div>
 
-                {/* Hired 15% bright marigold yellow pill */}
-                <div className="bg-[#fcc544] text-[#1b1c1e] text-[12px] font-medium px-4 py-1.5 rounded-full w-[62px] text-center shadow-xs">
+                {/* Hired 15% brand green pill */}
+                <div className="bg-[#c8ff00] text-[#0a0a0a] text-[12px] font-semibold px-4 py-1.5 rounded-full w-[62px] text-center shadow-xs">
                   15%
                 </div>
 
@@ -491,15 +491,15 @@ export function MaverxDashboard() {
                     <span className="text-[10px] text-neutral-400 font-normal">T</span>
                   </div>
 
-                  {/* Friday (Highlighted with Tooltip and yellow dot!) */}
+                  {/* Friday (Highlighted with Tooltip and brand green bar) */}
                   <div className="flex flex-col items-center gap-1.5 relative">
                     <div className="absolute inset-y-0 w-px border-l border-dashed border-black/[0.08] pointer-events-none -z-0" />
                     {/* Floating Tooltip Pill */}
-                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#fec842] text-[#1a1a1a] text-[9.5px] font-bold px-2 py-0.5 rounded-full shadow-xs whitespace-nowrap z-20">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#c8ff00] text-[#0a0a0a] text-[9.5px] font-bold px-2 py-0.5 rounded-full shadow-xs whitespace-nowrap z-20">
                       5h 23m
                     </div>
-                    <div className="w-1.5 h-14 rounded-full bg-[#fbbd30] z-10" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#fbbd30] z-10" />
+                    <div className="w-1.5 h-14 rounded-full bg-[#c8ff00] z-10" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#c8ff00] z-10" />
                     <span className="text-[10px] text-neutral-400 font-normal">F</span>
                   </div>
 
@@ -548,13 +548,13 @@ export function MaverxDashboard() {
                         );
                       })}
 
-                      {/* Thick, Bold Vibrant Golden Progress Arc sweeping to bottom right */}
+                      {/* Bold Brand Green Progress Arc sweeping to bottom right */}
                       <circle
                         cx="50"
                         cy="50"
                         r="37"
                         fill="none"
-                        stroke="#f9bd38"
+                        stroke="#c8ff00"
                         strokeWidth="8.5"
                         strokeDasharray="232.5"
                         strokeDashoffset={232.5 * (1 - 0.52)}
@@ -693,7 +693,7 @@ export function MaverxDashboard() {
                     </div>
                     {/* 3 Circular Avatar Stack */}
                     <div className="flex items-center -space-x-1.5 shrink-0">
-                      <div className="w-5 h-5 rounded-full border border-[#1e2023] overflow-hidden bg-amber-400">
+                      <div className="w-5 h-5 rounded-full border border-[#1e2023] overflow-hidden bg-[#c8ff00]">
                         <img src="./assets/team_avatars.png" className="w-full h-full object-cover" alt="" />
                       </div>
                       <div className="w-5 h-5 rounded-full border border-[#1e2023] overflow-hidden bg-rose-300">
@@ -753,9 +753,9 @@ export function MaverxDashboard() {
 
                 {/* Segmented Bar */}
                 <div className="flex items-center gap-1.5">
-                  {/* Yellow Task segment */}
-                  <div className="bg-[#f8c44c] rounded-xl h-7 px-3 flex-1 flex items-center justify-center shadow-xs">
-                    <span className="text-[11px] font-semibold text-[#1a1a1a]">Task</span>
+                  {/* Brand Green Task segment */}
+                  <div className="bg-[#c8ff00] rounded-xl h-7 px-3 flex-1 flex items-center justify-center shadow-xs">
+                    <span className="text-[11px] font-semibold text-[#0a0a0a]">Task</span>
                   </div>
 
                   {/* Charcoal segment */}
@@ -810,11 +810,11 @@ export function MaverxDashboard() {
                         {/* Status Checkbox / Indicator */}
                         <div>
                           {task.completed ? (
-                            <div className="w-4.5 h-4.5 rounded-full bg-[#f9bd38] flex items-center justify-center shadow-xs">
+                            <div className="w-4.5 h-4.5 rounded-full bg-[#c8ff00] flex items-center justify-center shadow-xs">
                               <Check
                                 size={10}
                                 strokeWidth={3}
-                                className="text-neutral-900"
+                                className="text-[#0a0a0a]"
                               />
                             </div>
                           ) : (
