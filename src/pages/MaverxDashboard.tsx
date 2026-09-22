@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Settings,
   Users,
@@ -29,6 +29,34 @@ interface TaskItem {
 export function MaverxDashboard() {
   const [activeTab, setActiveTab] = useState("Dashboard");
   const [expandedSection, setExpandedSection] = useState<string | null>("devices");
+
+  // Navigation Sliding Highlight Indicator
+  const tabRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+  const [indicatorStyle, setIndicatorStyle] = useState<{ left: number; width: number; opacity: number }>({
+    left: 0,
+    width: 0,
+    opacity: 0,
+  });
+
+  useEffect(() => {
+    const updateIndicator = () => {
+      const activeEl = tabRefs.current[activeTab];
+      if (activeEl) {
+        setIndicatorStyle({
+          left: activeEl.offsetLeft,
+          width: activeEl.offsetWidth,
+          opacity: 1,
+        });
+      }
+    };
+    updateIndicator();
+    const timer = setTimeout(updateIndicator, 60);
+    window.addEventListener("resize", updateIndicator);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", updateIndicator);
+    };
+  }, [activeTab]);
 
   // Interactive Timer
   const [timerRunning, setTimerRunning] = useState(false);
@@ -161,19 +189,32 @@ export function MaverxDashboard() {
             </div>
           </div>
 
-          {/* Navigation links & desktop Setting button */}
+          {/* Navigation links with white rounded capsule & animated sliding active pill */}
           <div className="flex items-center gap-2 sm:gap-4 w-full sm:w-auto overflow-hidden">
-            <nav className="flex items-center gap-1 sm:gap-2 bg-transparent overflow-x-auto scrollbar-none py-1 w-full -mx-1 px-1 flex-nowrap">
+            <nav className="relative flex items-center bg-white/70 backdrop-blur-md border border-black/[0.08] shadow-xs rounded-full p-1 overflow-x-auto scrollbar-none flex-nowrap">
+              {/* Animated sliding active black pill indicator */}
+              <div
+                className="absolute top-1 bottom-1 rounded-full bg-[#1c1e21] shadow-xs pointer-events-none transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                style={{
+                  left: `${indicatorStyle.left}px`,
+                  width: `${indicatorStyle.width}px`,
+                  opacity: indicatorStyle.opacity,
+                }}
+              />
+
               {navTabs.map((tab) => {
                 const isActive = activeTab === tab;
                 return (
                   <button
                     key={tab}
+                    ref={(el) => {
+                      tabRefs.current[tab] = el;
+                    }}
                     onClick={() => setActiveTab(tab)}
-                    className={`text-[12px] sm:text-[13px] whitespace-nowrap transition-all duration-200 cursor-pointer shrink-0 ${
+                    className={`relative z-10 text-[12px] sm:text-[13px] whitespace-nowrap transition-colors duration-200 cursor-pointer shrink-0 px-3.5 sm:px-4 py-1.5 rounded-full ${
                       isActive
-                        ? "bg-[#1c1e21] text-white px-3.5 sm:px-4 py-1.5 rounded-full font-normal shadow-xs"
-                        : "text-[#555a63] hover:text-[#111] px-2 sm:px-2.5 py-1.5 font-normal"
+                        ? "text-white font-medium"
+                        : "text-[#555a63] hover:text-[#111] font-normal"
                     }`}
                   >
                     {tab}
