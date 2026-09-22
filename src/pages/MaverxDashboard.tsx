@@ -295,7 +295,7 @@ export function MaverxDashboard() {
             {/* Milton Profile Card */}
             <div className="rounded-[28px] overflow-hidden relative h-[218px] shadow-xs border border-white/80 bg-[#042f2e]">
               <img
-                src="./assets/milton.png"
+                src="./assets/founder-avatar.png?v=2"
                 alt="Milton"
                 className="w-full h-full object-cover object-[center_12%]"
               />
