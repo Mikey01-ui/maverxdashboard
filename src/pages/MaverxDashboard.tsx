@@ -144,29 +144,36 @@ export function MaverxDashboard() {
         />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto p-6 sm:p-8 lg:p-10 flex flex-col gap-2">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-3.5 py-4 sm:p-8 lg:p-10 flex flex-col gap-2">
         {/* ===================== TOP NAVIGATION BAR ===================== */}
-        <header className="flex flex-wrap items-center justify-between gap-4 pb-5">
-          {/* Logo */}
-          <div className="flex items-center">
-            <div className="border border-black/[0.12] rounded-full px-5 py-1.5 text-[17px] font-semibold tracking-tight text-[#1a1a1a] bg-white/50 backdrop-blur-xs shadow-xs">
+        <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-3 sm:pb-5">
+          {/* Top row for mobile: Logo and Setting button */}
+          <div className="flex items-center justify-between w-full sm:w-auto">
+            <div className="border border-black/[0.12] rounded-full px-4 sm:px-5 py-1.5 text-[15px] sm:text-[17px] font-semibold tracking-tight text-[#1a1a1a] bg-white/50 backdrop-blur-xs shadow-xs">
               Miltomy
+            </div>
+            {/* Mobile-only Settings button */}
+            <div className="sm:hidden flex items-center">
+              <button className="border border-black/[0.12] rounded-full px-3.5 py-1.5 text-[12px] font-normal text-neutral-800 flex items-center gap-1.5 bg-white/40 hover:bg-white/60 transition-colors shadow-xs cursor-pointer">
+                <Settings size={12} strokeWidth={1.5} className="text-neutral-700" />
+                <span>Setting</span>
+              </button>
             </div>
           </div>
 
-          {/* Navigation links & right action buttons */}
-          <div className="flex flex-wrap items-center gap-2 sm:gap-4">
-            <nav className="flex items-center gap-1 sm:gap-4 bg-transparent">
+          {/* Navigation links & desktop Setting button */}
+          <div className="flex items-center gap-2 sm:gap-4 w-full sm:w-auto overflow-hidden">
+            <nav className="flex items-center gap-1 sm:gap-2 bg-transparent overflow-x-auto scrollbar-none py-1 w-full -mx-1 px-1 flex-nowrap">
               {navTabs.map((tab) => {
                 const isActive = activeTab === tab;
                 return (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`text-[13px] transition-all duration-200 cursor-pointer ${
+                    className={`text-[12px] sm:text-[13px] whitespace-nowrap transition-all duration-200 cursor-pointer shrink-0 ${
                       isActive
-                        ? "bg-[#1c1e21] text-white px-4 py-1.5 rounded-full font-normal shadow-xs"
-                        : "text-[#555a63] hover:text-[#111] px-1.5 py-1.5 font-normal"
+                        ? "bg-[#1c1e21] text-white px-3.5 sm:px-4 py-1.5 rounded-full font-normal shadow-xs"
+                        : "text-[#555a63] hover:text-[#111] px-2 sm:px-2.5 py-1.5 font-normal"
                     }`}
                   >
                     {tab}
@@ -175,8 +182,8 @@ export function MaverxDashboard() {
               })}
             </nav>
 
-            {/* Right Action Control: Setting (matching navbar size) */}
-            <div className="flex items-center pl-1">
+            {/* Desktop-only Setting button */}
+            <div className="hidden sm:flex items-center pl-1 shrink-0">
               <button className="border border-black/[0.12] rounded-full px-4 py-1.5 text-[13px] font-normal text-neutral-800 flex items-center gap-1.5 bg-white/40 hover:bg-white/60 transition-colors shadow-xs cursor-pointer">
                 <Settings size={13} strokeWidth={1.5} className="text-neutral-700" />
                 <span>Setting</span>
@@ -186,101 +193,103 @@ export function MaverxDashboard() {
         </header>
 
         {/* ===================== GREETING & METRICS PIPELINE ROW ===================== */}
-        <section className="pt-2 pb-5">
-          <h1 className="text-[34px] sm:text-[38px] font-normal tracking-tight text-[#161719] leading-tight mb-4">
+        <section className="pt-1 sm:pt-2 pb-4 sm:pb-5">
+          <h1 className="text-[26px] sm:text-[34px] lg:text-[38px] font-normal tracking-tight text-[#161719] leading-tight mb-3 sm:mb-4">
             Welcome in, Milton
           </h1>
 
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-            {/* Left side: Segmented Status Pipeline */}
-            <div className="flex flex-col">
-              {/* Labels directly positioned above the pills */}
-              <div className="flex items-center text-[11px] font-normal text-[#666] mb-1.5 pl-1">
-                <span className="w-[62px] text-center">Interviews</span>
-                <span className="w-[62px] text-center ml-2">Hired</span>
-                <span className="w-60 sm:w-72 text-left pl-3 ml-2">Project time</span>
-                <span className="w-[62px] text-center ml-2">Output</span>
-              </div>
-
-              {/* Pipeline Pills */}
-              <div className="flex items-center gap-2">
-                {/* Interviews 15% dark pill */}
-                <div className="bg-[#24272c] text-white text-[12px] font-medium px-4 py-1.5 rounded-full w-[62px] text-center shadow-xs">
-                  15%
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6">
+            {/* Left side: Segmented Status Pipeline with horizontal safety */}
+            <div className="w-full lg:w-auto overflow-x-auto scrollbar-none pb-1">
+              <div className="min-w-[340px] sm:min-w-0 flex flex-col">
+                {/* Labels directly positioned above the pills */}
+                <div className="flex items-center text-[11px] font-normal text-[#666] mb-1.5 pl-1">
+                  <span className="w-14 sm:w-[62px] text-center shrink-0">Interviews</span>
+                  <span className="w-14 sm:w-[62px] text-center ml-2 shrink-0">Hired</span>
+                  <span className="flex-1 sm:w-72 text-left pl-3 ml-2 min-w-[120px]">Project time</span>
+                  <span className="w-14 sm:w-[62px] text-center ml-2 shrink-0">Output</span>
                 </div>
 
-                {/* Hired 15% brand green pill */}
-                <div className="bg-[#c8ff00] text-[#0a0a0a] text-[12px] font-semibold px-4 py-1.5 rounded-full w-[62px] text-center shadow-xs">
-                  15%
-                </div>
+                {/* Pipeline Pills */}
+                <div className="flex items-center gap-2">
+                  {/* Interviews 15% dark pill */}
+                  <div className="bg-[#24272c] text-white text-[11px] sm:text-[12px] font-medium px-2.5 sm:px-4 py-1.5 rounded-full w-14 sm:w-[62px] text-center shadow-xs shrink-0">
+                    15%
+                  </div>
 
-                {/* Project time 60% translucent diagonal striped pill */}
-                <div
-                  className="rounded-full px-4 py-1.5 text-[12px] font-medium text-[#1c1e21] w-60 sm:w-72 flex items-center shadow-xs"
-                  style={{
-                    background: `repeating-linear-gradient(
-                      -45deg,
-                      rgba(255, 255, 255, 0.92),
-                      rgba(255, 255, 255, 0.92) 3.5px,
-                      rgba(167, 243, 208, 0.45) 3.5px,
-                      rgba(167, 243, 208, 0.45) 7px
-                    )`,
-                    border: "1px solid rgba(255, 255, 255, 0.75)",
-                  }}
-                >
-                  60%
-                </div>
+                  {/* Hired 15% brand green pill */}
+                  <div className="bg-[#c8ff00] text-[#0a0a0a] text-[11px] sm:text-[12px] font-semibold px-2.5 sm:px-4 py-1.5 rounded-full w-14 sm:w-[62px] text-center shadow-xs shrink-0">
+                    15%
+                  </div>
 
-                {/* Output 10% clean outlined pill */}
-                <div className="border border-black/[0.18] bg-transparent text-[#1a1a1a] text-[12px] font-medium px-4 py-1.5 rounded-full w-[62px] text-center">
-                  10%
+                  {/* Project time 60% translucent diagonal striped pill */}
+                  <div
+                    className="rounded-full px-3 sm:px-4 py-1.5 text-[11px] sm:text-[12px] font-medium text-[#1c1e21] flex-1 sm:w-72 min-w-[120px] flex items-center shadow-xs"
+                    style={{
+                      background: `repeating-linear-gradient(
+                        -45deg,
+                        rgba(255, 255, 255, 0.92),
+                        rgba(255, 255, 255, 0.92) 3.5px,
+                        rgba(167, 243, 208, 0.45) 3.5px,
+                        rgba(167, 243, 208, 0.45) 7px
+                      )`,
+                      border: "1px solid rgba(255, 255, 255, 0.75)",
+                    }}
+                  >
+                    60%
+                  </div>
+
+                  {/* Output 10% clean outlined pill */}
+                  <div className="border border-black/[0.18] bg-transparent text-[#1a1a1a] text-[11px] sm:text-[12px] font-medium px-2.5 sm:px-4 py-1.5 rounded-full w-14 sm:w-[62px] text-center shrink-0">
+                    10%
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Right side: 3 Big Metric Quick Stats */}
-            <div className="flex items-center gap-8 sm:gap-10 lg:gap-12 pr-2">
+            <div className="grid grid-cols-3 gap-2 sm:flex sm:items-center sm:gap-8 lg:gap-12 pr-2 pt-1 sm:pt-0">
               {/* 78 Employe */}
               <div className="flex flex-col">
-                <div className="flex items-center gap-2">
-                  <div className="w-5.5 h-5.5 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <div className="w-5 h-5 sm:w-5.5 sm:h-5.5 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70 shrink-0">
                     <Users size={11} strokeWidth={1.5} />
                   </div>
-                  <span className="text-[38px] sm:text-[42px] font-light tracking-tighter text-[#1a1a1a] leading-none">
+                  <span className="text-[28px] sm:text-[38px] lg:text-[42px] font-light tracking-tighter text-[#1a1a1a] leading-none">
                     78
                   </span>
                 </div>
-                <span className="text-[11px] text-[#666c77] font-normal pl-7.5 -mt-1">
+                <span className="text-[10px] sm:text-[11px] text-[#666c77] font-normal pl-6 sm:pl-7.5 mt-0.5 sm:-mt-1">
                   Employe
                 </span>
               </div>
 
               {/* 56 Hirings */}
               <div className="flex flex-col">
-                <div className="flex items-center gap-2">
-                  <div className="w-5.5 h-5.5 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <div className="w-5 h-5 sm:w-5.5 sm:h-5.5 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70 shrink-0">
                     <UserPlus size={11} strokeWidth={1.5} />
                   </div>
-                  <span className="text-[38px] sm:text-[42px] font-light tracking-tighter text-[#1a1a1a] leading-none">
+                  <span className="text-[28px] sm:text-[38px] lg:text-[42px] font-light tracking-tighter text-[#1a1a1a] leading-none">
                     56
                   </span>
                 </div>
-                <span className="text-[11px] text-[#666c77] font-normal pl-7.5 -mt-1">
+                <span className="text-[10px] sm:text-[11px] text-[#666c77] font-normal pl-6 sm:pl-7.5 mt-0.5 sm:-mt-1">
                   Hirings
                 </span>
               </div>
 
               {/* 203 Projects */}
               <div className="flex flex-col">
-                <div className="flex items-center gap-2">
-                  <div className="w-5.5 h-5.5 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <div className="w-5 h-5 sm:w-5.5 sm:h-5.5 rounded-full border border-black/[0.12] bg-white/40 flex items-center justify-center text-black/70 shrink-0">
                     <Laptop size={11} strokeWidth={1.5} />
                   </div>
-                  <span className="text-[38px] sm:text-[42px] font-light tracking-tighter text-[#1a1a1a] leading-none">
+                  <span className="text-[28px] sm:text-[38px] lg:text-[42px] font-light tracking-tighter text-[#1a1a1a] leading-none">
                     203
                   </span>
                 </div>
-                <span className="text-[11px] text-[#666c77] font-normal pl-7.5 -mt-1">
+                <span className="text-[10px] sm:text-[11px] text-[#666c77] font-normal pl-6 sm:pl-7.5 mt-0.5 sm:-mt-1">
                   Projects
                 </span>
               </div>
@@ -611,117 +620,119 @@ export function MaverxDashboard() {
             </div>
 
             {/* Bottom Row: Calendar & Schedule Card */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-[26px] p-5 shadow-xs border border-white/80 flex flex-col justify-between h-[230px]">
+            <div className="bg-white/80 backdrop-blur-sm rounded-[26px] p-4 sm:p-5 shadow-xs border border-white/80 flex flex-col justify-between min-h-[240px] sm:h-[230px] overflow-hidden">
               {/* Header: Month selector */}
               <div className="flex items-center justify-between mb-2">
-                <button className="border border-neutral-300/80 rounded-full px-3.5 py-1 text-[11px] font-medium text-neutral-700 bg-white/50 hover:bg-white/80 transition-colors shadow-xs cursor-pointer">
+                <button className="border border-neutral-300/80 rounded-full px-3 sm:px-3.5 py-1 text-[11px] font-medium text-neutral-700 bg-white/50 hover:bg-white/80 transition-colors shadow-xs cursor-pointer">
                   August
                 </button>
                 <span className="text-xs font-semibold text-neutral-800">
                   September 2024
                 </span>
-                <button className="border border-neutral-300/80 rounded-full px-3.5 py-1 text-[11px] font-medium text-neutral-700 bg-white/50 hover:bg-white/80 transition-colors shadow-xs cursor-pointer">
+                <button className="border border-neutral-300/80 rounded-full px-3 sm:px-3.5 py-1 text-[11px] font-medium text-neutral-700 bg-white/50 hover:bg-white/80 transition-colors shadow-xs cursor-pointer">
                   October
                 </button>
               </div>
 
-              {/* Schedule Matrix */}
-              <div className="flex-1 relative flex flex-col justify-between pt-1">
-                {/* Day Columns Header - Exactly 6 days Mon 22 - Sat 27 */}
-                <div className="grid grid-cols-6 text-center pl-12 pr-2">
-                  <div>
-                    <span className="text-[10px] text-neutral-400 block">Mon</span>
-                    <span className="text-xs font-medium text-neutral-800">22</span>
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-neutral-400 block">Tue</span>
-                    <span className="text-xs font-medium text-neutral-800">23</span>
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-neutral-400 block">Wed</span>
-                    <span className="text-xs font-medium text-neutral-800">24</span>
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-neutral-400 block">Thu</span>
-                    <span className="text-xs font-medium text-neutral-800">25</span>
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-neutral-400 block">Fri</span>
-                    <span className="text-xs font-medium text-neutral-800">26</span>
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-neutral-400 block">Sat</span>
-                    <span className="text-xs font-medium text-neutral-800">27</span>
-                  </div>
-                </div>
-
-                {/* Grid Body with Time Labels & Dotted Lines */}
-                <div className="relative flex-1 mt-1 flex flex-col justify-between py-1">
-                  {/* Vertical Dotted Guides across 6 days */}
-                  <div className="absolute inset-0 pl-12 pr-2 grid grid-cols-6 pointer-events-none">
-                    <div className="border-r border-dotted border-neutral-300/60" />
-                    <div className="border-r border-dotted border-neutral-300/60" />
-                    <div className="border-r border-dotted border-neutral-300/60" />
-                    <div className="border-r border-dotted border-neutral-300/60" />
-                    <div className="border-r border-dotted border-neutral-300/60" />
-                    <div />
-                  </div>
-
-                  {/* Time Labels */}
-                  <div className="flex items-center text-[10px] text-neutral-400 h-6">
-                    8:00 am
-                  </div>
-                  <div className="flex items-center text-[10px] text-neutral-400 h-6">
-                    9:00 am
-                  </div>
-                  <div className="flex items-center text-[10px] text-neutral-400 h-6">
-                    10:00 am
-                  </div>
-                  <div className="flex items-center text-[10px] text-neutral-400 h-6">
-                    11:00 am
-                  </div>
-
-                  {/* Event 1: Weekly Team Sync (spanning Tue 23 - Wed 24) */}
-                  <div className="absolute top-1 left-[25%] right-[42%] bg-[#1e2023] text-white rounded-2xl px-3.5 py-2 shadow-md border border-neutral-700/50 flex items-center justify-between gap-2.5 z-10">
+              {/* Schedule Matrix container with horizontal scroll protection */}
+              <div className="w-full overflow-x-auto scrollbar-none">
+                <div className="min-w-[320px] flex-1 relative flex flex-col justify-between pt-1">
+                  {/* Day Columns Header - Exactly 6 days Mon 22 - Sat 27 */}
+                  <div className="grid grid-cols-6 text-center pl-8 sm:pl-12 pr-2">
                     <div>
-                      <p className="text-[11px] font-semibold text-white leading-tight">
-                        Weekly Team Sync
-                      </p>
-                      <p className="text-[9px] text-neutral-400 leading-tight mt-0.5">
-                        Discuss progress on projects
-                      </p>
+                      <span className="text-[10px] text-neutral-400 block">Mon</span>
+                      <span className="text-xs font-medium text-neutral-800">22</span>
                     </div>
-                    {/* 3 Circular Avatar Stack */}
-                    <div className="flex items-center -space-x-1.5 shrink-0">
-                      <div className="w-5 h-5 rounded-full border border-[#1e2023] overflow-hidden bg-[#c8ff00]">
-                        <img src="./assets/team_avatars.png" className="w-full h-full object-cover" alt="" />
-                      </div>
-                      <div className="w-5 h-5 rounded-full border border-[#1e2023] overflow-hidden bg-rose-300">
-                        <img src="./assets/team_avatars.png" className="w-full h-full object-cover scale-125" alt="" />
-                      </div>
-                      <div className="w-5 h-5 rounded-full border border-[#1e2023] overflow-hidden bg-sky-300">
-                        <img src="./assets/team_avatars.png" className="w-full h-full object-cover scale-150" alt="" />
-                      </div>
+                    <div>
+                      <span className="text-[10px] text-neutral-400 block">Tue</span>
+                      <span className="text-xs font-medium text-neutral-800">23</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-neutral-400 block">Wed</span>
+                      <span className="text-xs font-medium text-neutral-800">24</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-neutral-400 block">Thu</span>
+                      <span className="text-xs font-medium text-neutral-800">25</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-neutral-400 block">Fri</span>
+                      <span className="text-xs font-medium text-neutral-800">26</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-neutral-400 block">Sat</span>
+                      <span className="text-xs font-medium text-neutral-800">27</span>
                     </div>
                   </div>
 
-                  {/* Event 2: Onboarding Session (spanning Thu 25 - Fri 26) */}
-                  <div className="absolute top-[48%] left-[58%] right-[8%] bg-white text-neutral-900 rounded-2xl px-3.5 py-1.5 shadow-sm border border-neutral-200/90 flex items-center justify-between gap-2.5 z-10">
-                    <div>
-                      <p className="text-[11px] font-semibold text-neutral-900 leading-tight">
-                        Onboarding Session
-                      </p>
-                      <p className="text-[9px] text-neutral-500 leading-tight mt-0.5">
-                        Introduction for new hires
-                      </p>
+                  {/* Grid Body with Time Labels & Dotted Lines */}
+                  <div className="relative flex-1 mt-1 flex flex-col justify-between py-1 min-h-[110px]">
+                    {/* Vertical Dotted Guides across 6 days */}
+                    <div className="absolute inset-0 pl-8 sm:pl-12 pr-2 grid grid-cols-6 pointer-events-none">
+                      <div className="border-r border-dotted border-neutral-300/60" />
+                      <div className="border-r border-dotted border-neutral-300/60" />
+                      <div className="border-r border-dotted border-neutral-300/60" />
+                      <div className="border-r border-dotted border-neutral-300/60" />
+                      <div className="border-r border-dotted border-neutral-300/60" />
+                      <div />
                     </div>
-                    {/* 2 Circular Avatar Stack */}
-                    <div className="flex items-center -space-x-1.5 shrink-0">
-                      <div className="w-5 h-5 rounded-full border border-white overflow-hidden bg-teal-300">
-                        <img src="./assets/onboarding_avatars.png" className="w-full h-full object-cover" alt="" />
+
+                    {/* Time Labels */}
+                    <div className="flex items-center text-[10px] text-neutral-400 h-6 pl-0.5">
+                      8:00 am
+                    </div>
+                    <div className="flex items-center text-[10px] text-neutral-400 h-6 pl-0.5">
+                      9:00 am
+                    </div>
+                    <div className="flex items-center text-[10px] text-neutral-400 h-6 pl-0.5">
+                      10:00 am
+                    </div>
+                    <div className="flex items-center text-[10px] text-neutral-400 h-6 pl-0.5">
+                      11:00 am
+                    </div>
+
+                    {/* Event 1: Weekly Team Sync (spanning Tue 23 - Wed 24) */}
+                    <div className="absolute top-1 left-[24%] right-[38%] sm:right-[42%] bg-[#1e2023] text-white rounded-xl sm:rounded-2xl px-2.5 sm:px-3.5 py-1.5 sm:py-2 shadow-md border border-neutral-700/50 flex items-center justify-between gap-1.5 sm:gap-2.5 z-10">
+                      <div className="min-w-0 flex-1">
+                        <p className="text-[10px] sm:text-[11px] font-semibold text-white leading-tight truncate">
+                          Weekly Team Sync
+                        </p>
+                        <p className="text-[8.5px] sm:text-[9px] text-neutral-400 leading-tight mt-0.5 truncate">
+                          Discuss progress
+                        </p>
                       </div>
-                      <div className="w-5 h-5 rounded-full border border-white overflow-hidden bg-emerald-300">
-                        <img src="./assets/onboarding_avatars.png" className="w-full h-full object-cover scale-125" alt="" />
+                      {/* 3 Circular Avatar Stack */}
+                      <div className="flex items-center -space-x-1.5 shrink-0">
+                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full border border-[#1e2023] overflow-hidden bg-[#c8ff00]">
+                          <img src="./assets/team_avatars.png" className="w-full h-full object-cover" alt="" />
+                        </div>
+                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full border border-[#1e2023] overflow-hidden bg-rose-300">
+                          <img src="./assets/team_avatars.png" className="w-full h-full object-cover scale-125" alt="" />
+                        </div>
+                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full border border-[#1e2023] overflow-hidden bg-sky-300">
+                          <img src="./assets/team_avatars.png" className="w-full h-full object-cover scale-150" alt="" />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Event 2: Onboarding Session (spanning Thu 25 - Fri 26) */}
+                    <div className="absolute top-[48%] left-[54%] sm:left-[58%] right-[4%] sm:right-[8%] bg-white text-neutral-900 rounded-xl sm:rounded-2xl px-2.5 sm:px-3.5 py-1.5 shadow-sm border border-neutral-200/90 flex items-center justify-between gap-1.5 sm:gap-2.5 z-10">
+                      <div className="min-w-0 flex-1">
+                        <p className="text-[10px] sm:text-[11px] font-semibold text-neutral-900 leading-tight truncate">
+                          Onboarding Session
+                        </p>
+                        <p className="text-[8.5px] sm:text-[9px] text-neutral-500 leading-tight mt-0.5 truncate">
+                          Intro for new hires
+                        </p>
+                      </div>
+                      {/* 2 Circular Avatar Stack */}
+                      <div className="flex items-center -space-x-1.5 shrink-0">
+                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full border border-white overflow-hidden bg-teal-300">
+                          <img src="./assets/onboarding_avatars.png" className="w-full h-full object-cover" alt="" />
+                        </div>
+                        <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full border border-white overflow-hidden bg-emerald-300">
+                          <img src="./assets/onboarding_avatars.png" className="w-full h-full object-cover scale-125" alt="" />
+                        </div>
                       </div>
                     </div>
                   </div>
